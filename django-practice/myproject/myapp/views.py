@@ -1,9 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from http.client import HTTPResponse
 # Create your views here.
 
-def qryview(request): 
-    name = request.GET['name'] 
-    id = request.GET['id'] 
-    return HttpResponse("Name:{} UserID:{}".format(name, id)) 
+def drinks(request, drink_name):
+    drink = {
+        'mocha' : 'type of coffee',
+        'tea' : 'type of hot beverage',
+        'lemonade': 'type of refreshment'
+    }
+    choice_of_drink = drink[drink_name]
+    return HttpResponse(f"<h2>{drink_name}</h2> " + choice_of_drink)
