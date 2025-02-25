@@ -5,4 +5,4 @@ from django.http import JsonResponse
 
 # Create your views here.
 def form_view(request):
-    
+    form = CommentForm() # create a form object
