@@ -9,3 +9,5 @@ def form_view(request):
     
     if request.method == 'POST':
         form = CommentForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
