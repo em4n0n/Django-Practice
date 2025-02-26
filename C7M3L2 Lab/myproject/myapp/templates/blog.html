@@ -14,7 +14,7 @@
     <h1>User Comments</h1>
     <formn method="POST" id="form">
         {% csrf_token %}
-        
+        {{ form.as_p}}
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 <div/>
