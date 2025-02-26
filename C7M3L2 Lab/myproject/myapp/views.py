@@ -17,3 +17,5 @@ def form_view(request):
                 comment = cd['comment']
             )
             uc.save()
+            
+    return render(request, 'blog.html', {'form': form})
