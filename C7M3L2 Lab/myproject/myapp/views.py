@@ -16,3 +16,4 @@ def form_view(request):
                 last_name = cd['last_name'],
                 comment = cd['comment']
             )
+            uc.save()
